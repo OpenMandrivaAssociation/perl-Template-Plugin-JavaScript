@@ -1,26 +1,25 @@
+%define upstream_name	 Template-Plugin-JavaScript
+%define upstream_version 0.01
 
-%define module	Template-Plugin-JavaScript
-%define name	perl-%{module}
-%define version	0.01
-%define rel	1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	TT filter to encode text to be safe in JavaScript
-Name:		%{name}
-Version:	%{version}
-Release:	%mkrel %{rel}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source0:	http://www.cpan.org/modules/by-module/Template/%{module}-%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Template/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Template::Plugin::JavaScript is a TT filter that filters text so it
 can be safely used in JavaScript quotes.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -38,4 +37,3 @@ rm -rf %{buildroot}
 %doc Changes
 %{perl_vendorlib}/Template
 %{_mandir}/man3/*
-
