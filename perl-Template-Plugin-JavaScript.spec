@@ -1,15 +1,13 @@
 %define upstream_name	 Template-Plugin-JavaScript
-%define upstream_version 0.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.02
+Release:	6
 
 Summary:	TT filter to encode text to be safe in JavaScript
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Template-Plugin-JavaScript
-Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Template-Plugin-JavaScript-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Template-Plugin-JavaScript-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -20,7 +18,7 @@ Template::Plugin::JavaScript is a TT filter that filters text so it
 can be safely used in JavaScript quotes.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -41,9 +39,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Wed Aug 05 2009 Jérôme Quelin <jquelin@mandriva.org> 0.10.0-1mdv2010.0
 + Revision: 410097
-- rebuild using %%perl_convert_version
-
-* Thu Mar 06 2008 Anssi Hannula <anssi@mandriva.org> 0.01-1mdv2008.1
+- rebuild using %0.02 Thu Mar 06 2008 Anssi Hannula <anssi@mandriva.org> 0.01-1mdv2008.1
 + Revision: 181029
 - initial Mandriva release
 
