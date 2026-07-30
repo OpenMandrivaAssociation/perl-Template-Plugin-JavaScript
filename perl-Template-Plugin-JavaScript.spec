@@ -1,13 +1,14 @@
 %define upstream_name	 Template-Plugin-JavaScript
+%define upstream_version 0.02
 Name:		perl-%{upstream_name}
 Version:	0.02
-Release:	6
+Release:	1
 
 Summary:	TT filter to encode text to be safe in JavaScript
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Template-Plugin-JavaScript
-Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Template-Plugin-JavaScript-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Template-Plugin-JavaScript-0.02.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -31,15 +32,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc Changes
 %{perl_vendorlib}/Template
 %{_mandir}/man3/*
-
-%changelog
-* Sun Dec 19 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.20.0-1mdv2011.0
-+ Revision: 622949
-- new version
-
-* Wed Aug 05 2009 Jérôme Quelin <jquelin@mandriva.org> 0.10.0-1mdv2010.0
-+ Revision: 410097
-- rebuild using %0.02 Thu Mar 06 2008 Anssi Hannula <anssi@mandriva.org> 0.01-1mdv2008.1
-+ Revision: 181029
-- initial Mandriva release
 
