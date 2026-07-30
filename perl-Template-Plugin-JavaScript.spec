@@ -2,7 +2,7 @@
 %define upstream_version 0.02
 Name:		perl-%{upstream_name}
 Version:	0.02
-Release:	1
+Release:	2
 
 Summary:	TT filter to encode text to be safe in JavaScript
 License:	GPL+ or Artistic
@@ -19,7 +19,7 @@ Template::Plugin::JavaScript is a TT filter that filters text so it
 can be safely used in JavaScript quotes.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n Template-Plugin-JavaScript-0.02
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
