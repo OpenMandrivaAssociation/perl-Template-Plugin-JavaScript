@@ -2,7 +2,7 @@
 %define upstream_version 0.02
 Name:		perl-%{upstream_name}
 Version:	0.02
-Release:	2
+Release:	3
 
 Summary:	TT filter to encode text to be safe in JavaScript
 License:	GPL+ or Artistic
