@@ -2,7 +2,7 @@
 %define upstream_version 0.02
 Name:		perl-%{upstream_name}
 Version:	0.02
-Release:	4
+Release:	5
 
 Summary:	TT filter to encode text to be safe in JavaScript
 License:	GPL+ or Artistic
@@ -12,6 +12,8 @@ Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Template-Plugin-Java
 
 BuildRequires:	make
 BuildRequires:	perl-devel
+BuildRequires:	perl(Template)
+BuildRequires:	perl(Test::More)
 BuildArch:	noarch
 
 %description
